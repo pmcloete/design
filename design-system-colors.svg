@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1336" height="2988" viewBox="0 0 1336 2988" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+
+<defs>
+  <pattern id="alpha-grid" width="10" height="10" patternUnits="userSpaceOnUse">
+    <rect width="10" height="10" fill="#ffffff"/>
+    <rect width="5" height="5" fill="#d9d9d9"/>
+    <rect x="5" y="5" width="5" height="5" fill="#d9d9d9"/>
+  </pattern>
+</defs>
+
+<rect x="0" y="0" width="1336" height="1492" fill="#ffffff"/>
+<text x="48" y="56" font-size="22" font-weight="700" fill="#0a0a0a" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">Light Mode</text>
+<text x="48" y="93" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#6b7280" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">SURFACES</text>
+<rect x="48" y="114" width="190" height="80" rx="8" fill="#ffffff" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="213" font-size="12" fill="#0a0a0a">background</text>
+<text x="48" y="227" font-size="11" fill="#6b7280">#ffffff</text>
+<rect x="258" y="114" width="190" height="80" rx="8" fill="#090b0c" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="213" font-size="12" fill="#0a0a0a">foreground</text>
+<text x="258" y="227" font-size="11" fill="#6b7280">#090b0c</text>
+<rect x="468" y="114" width="190" height="80" rx="8" fill="#ffffff" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="213" font-size="12" fill="#0a0a0a">card</text>
+<text x="468" y="227" font-size="11" fill="#6b7280">#ffffff</text>
+<rect x="678" y="114" width="190" height="80" rx="8" fill="#090b0c" stroke="#00000022" stroke-width="1"/>
+<text x="678" y="213" font-size="12" fill="#0a0a0a">card-foreground</text>
+<text x="678" y="227" font-size="11" fill="#6b7280">#090b0c</text>
+<rect x="888" y="114" width="190" height="80" rx="8" fill="#ffffff" stroke="#00000022" stroke-width="1"/>
+<text x="888" y="213" font-size="12" fill="#0a0a0a">popover</text>
+<text x="888" y="227" font-size="11" fill="#6b7280">#ffffff</text>
+<rect x="1098" y="114" width="190" height="80" rx="8" fill="#090b0c" stroke="#00000022" stroke-width="1"/>
+<text x="1098" y="213" font-size="12" fill="#0a0a0a">popover-foreground</text>
+<text x="1098" y="227" font-size="11" fill="#6b7280">#090b0c</text>
+<text x="48" y="277" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#6b7280" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">BRAND</text>
+<rect x="48" y="298" width="190" height="80" rx="8" fill="#007595" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="397" font-size="12" fill="#0a0a0a">primary</text>
+<text x="48" y="411" font-size="11" fill="#6b7280">#007595</text>
+<rect x="258" y="298" width="190" height="80" rx="8" fill="#ecfeff" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="397" font-size="12" fill="#0a0a0a">primary-foreground</text>
+<text x="258" y="411" font-size="11" fill="#6b7280">#ecfeff</text>
+<rect x="468" y="298" width="190" height="80" rx="8" fill="#f4f4f5" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="397" font-size="12" fill="#0a0a0a">secondary</text>
+<text x="468" y="411" font-size="11" fill="#6b7280">#f4f4f5</text>
+<rect x="678" y="298" width="190" height="80" rx="8" fill="#18181b" stroke="#00000022" stroke-width="1"/>
+<text x="678" y="397" font-size="12" fill="#0a0a0a">secondary-foreground</text>
+<text x="678" y="411" font-size="11" fill="#6b7280">#18181b</text>
+<rect x="888" y="298" width="190" height="80" rx="8" fill="#f1f3f3" stroke="#00000022" stroke-width="1"/>
+<text x="888" y="397" font-size="12" fill="#0a0a0a">muted</text>
+<text x="888" y="411" font-size="11" fill="#6b7280">#f1f3f3</text>
+<rect x="1098" y="298" width="190" height="80" rx="8" fill="#67787c" stroke="#00000022" stroke-width="1"/>
+<text x="1098" y="397" font-size="12" fill="#0a0a0a">muted-foreground</text>
+<text x="1098" y="411" font-size="11" fill="#6b7280">#67787c</text>
+<rect x="48" y="436" width="190" height="80" rx="8" fill="#f1f3f3" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="535" font-size="12" fill="#0a0a0a">accent</text>
+<text x="48" y="549" font-size="11" fill="#6b7280">#f1f3f3</text>
+<rect x="258" y="436" width="190" height="80" rx="8" fill="#161b1d" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="535" font-size="12" fill="#0a0a0a">accent-foreground</text>
+<text x="258" y="549" font-size="11" fill="#6b7280">#161b1d</text>
+<text x="48" y="599" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#6b7280" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">STATUS</text>
+<rect x="48" y="620" width="190" height="80" rx="8" fill="#df2225" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="719" font-size="12" fill="#0a0a0a">destructive</text>
+<text x="48" y="733" font-size="11" fill="#6b7280">#df2225</text>
+<rect x="258" y="620" width="190" height="80" rx="8" fill="#fcf3f3" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="719" font-size="12" fill="#0a0a0a">destructive-foreground</text>
+<text x="258" y="733" font-size="11" fill="#6b7280">#fcf3f3</text>
+<rect x="468" y="620" width="190" height="80" rx="8" fill="#e49e28" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="719" font-size="12" fill="#0a0a0a">caution</text>
+<text x="468" y="733" font-size="11" fill="#6b7280">#e49e28</text>
+<rect x="678" y="620" width="190" height="80" rx="8" fill="#1b150c" stroke="#00000022" stroke-width="1"/>
+<text x="678" y="719" font-size="12" fill="#0a0a0a">caution-foreground</text>
+<text x="678" y="733" font-size="11" fill="#6b7280">#1b150c</text>
+<rect x="888" y="620" width="190" height="80" rx="8" fill="#24ab39" stroke="#00000022" stroke-width="1"/>
+<text x="888" y="719" font-size="12" fill="#0a0a0a">success</text>
+<text x="888" y="733" font-size="11" fill="#6b7280">#24ab39</text>
+<rect x="1098" y="620" width="190" height="80" rx="8" fill="#101810" stroke="#00000022" stroke-width="1"/>
+<text x="1098" y="719" font-size="12" fill="#0a0a0a">success-foreground</text>
+<text x="1098" y="733" font-size="11" fill="#6b7280">#101810</text>
+<text x="48" y="783" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#6b7280" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">FORM &amp; INTERACTION</text>
+<rect x="48" y="804" width="190" height="80" rx="8" fill="#e3e7e8" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="903" font-size="12" fill="#0a0a0a">border</text>
+<text x="48" y="917" font-size="11" fill="#6b7280">#e3e7e8</text>
+<rect x="258" y="804" width="190" height="80" rx="8" fill="#e3e7e8" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="903" font-size="12" fill="#0a0a0a">input</text>
+<text x="258" y="917" font-size="11" fill="#6b7280">#e3e7e8</text>
+<rect x="468" y="804" width="190" height="80" rx="8" fill="#9ca8ab" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="903" font-size="12" fill="#0a0a0a">ring</text>
+<text x="468" y="917" font-size="11" fill="#6b7280">#9ca8ab</text>
+<text x="48" y="967" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#6b7280" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">CHART</text>
+<rect x="48" y="988" width="190" height="80" rx="8" fill="#53eafd" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="1087" font-size="12" fill="#0a0a0a">chart-1</text>
+<text x="48" y="1101" font-size="11" fill="#6b7280">#53eafd</text>
+<rect x="258" y="988" width="190" height="80" rx="8" fill="#00b8db" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="1087" font-size="12" fill="#0a0a0a">chart-2</text>
+<text x="258" y="1101" font-size="11" fill="#6b7280">#00b8db</text>
+<rect x="468" y="988" width="190" height="80" rx="8" fill="#0092b8" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="1087" font-size="12" fill="#0a0a0a">chart-3</text>
+<text x="468" y="1101" font-size="11" fill="#6b7280">#0092b8</text>
+<rect x="678" y="988" width="190" height="80" rx="8" fill="#007595" stroke="#00000022" stroke-width="1"/>
+<text x="678" y="1087" font-size="12" fill="#0a0a0a">chart-4</text>
+<text x="678" y="1101" font-size="11" fill="#6b7280">#007595</text>
+<rect x="888" y="988" width="190" height="80" rx="8" fill="#005f78" stroke="#00000022" stroke-width="1"/>
+<text x="888" y="1087" font-size="12" fill="#0a0a0a">chart-5</text>
+<text x="888" y="1101" font-size="11" fill="#6b7280">#005f78</text>
+<text x="48" y="1151" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#6b7280" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">SIDEBAR</text>
+<rect x="48" y="1172" width="190" height="80" rx="8" fill="#f9fbfb" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="1271" font-size="12" fill="#0a0a0a">sidebar</text>
+<text x="48" y="1285" font-size="11" fill="#6b7280">#f9fbfb</text>
+<rect x="258" y="1172" width="190" height="80" rx="8" fill="#090b0c" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="1271" font-size="12" fill="#0a0a0a">sidebar-foreground</text>
+<text x="258" y="1285" font-size="11" fill="#6b7280">#090b0c</text>
+<rect x="468" y="1172" width="190" height="80" rx="8" fill="#0092b8" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="1271" font-size="12" fill="#0a0a0a">sidebar-primary</text>
+<text x="468" y="1285" font-size="11" fill="#6b7280">#0092b8</text>
+<rect x="678" y="1172" width="190" height="80" rx="8" fill="#ecfeff" stroke="#00000022" stroke-width="1"/>
+<text x="678" y="1271" font-size="12" fill="#0a0a0a">sidebar-primary-foreground</text>
+<text x="678" y="1285" font-size="11" fill="#6b7280">#ecfeff</text>
+<rect x="888" y="1172" width="190" height="80" rx="8" fill="#f1f3f3" stroke="#00000022" stroke-width="1"/>
+<text x="888" y="1271" font-size="12" fill="#0a0a0a">sidebar-accent</text>
+<text x="888" y="1285" font-size="11" fill="#6b7280">#f1f3f3</text>
+<rect x="1098" y="1172" width="190" height="80" rx="8" fill="#161b1d" stroke="#00000022" stroke-width="1"/>
+<text x="1098" y="1271" font-size="12" fill="#0a0a0a">sidebar-accent-foreground</text>
+<text x="1098" y="1285" font-size="11" fill="#6b7280">#161b1d</text>
+<rect x="48" y="1310" width="190" height="80" rx="8" fill="#e3e7e8" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="1409" font-size="12" fill="#0a0a0a">sidebar-border</text>
+<text x="48" y="1423" font-size="11" fill="#6b7280">#e3e7e8</text>
+<rect x="258" y="1310" width="190" height="80" rx="8" fill="#9ca8ab" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="1409" font-size="12" fill="#0a0a0a">sidebar-ring</text>
+<text x="258" y="1423" font-size="11" fill="#6b7280">#9ca8ab</text>
+<rect x="0" y="1496" width="1336" height="1492" fill="#0a0a0a"/>
+<text x="48" y="1552" font-size="22" font-weight="700" fill="#f5f5f5" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">Dark Mode</text>
+<text x="48" y="1589" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#9ca3af" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">SURFACES</text>
+<rect x="48" y="1610" width="190" height="80" rx="8" fill="#090b0c" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="1709" font-size="12" fill="#f5f5f5">background</text>
+<text x="48" y="1723" font-size="11" fill="#9ca3af">#090b0c</text>
+<rect x="258" y="1610" width="190" height="80" rx="8" fill="#f9fbfb" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="1709" font-size="12" fill="#f5f5f5">foreground</text>
+<text x="258" y="1723" font-size="11" fill="#9ca3af">#f9fbfb</text>
+<rect x="468" y="1610" width="190" height="80" rx="8" fill="#161b1d" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="1709" font-size="12" fill="#f5f5f5">card</text>
+<text x="468" y="1723" font-size="11" fill="#9ca3af">#161b1d</text>
+<rect x="678" y="1610" width="190" height="80" rx="8" fill="#f9fbfb" stroke="#00000022" stroke-width="1"/>
+<text x="678" y="1709" font-size="12" fill="#f5f5f5">card-foreground</text>
+<text x="678" y="1723" font-size="11" fill="#9ca3af">#f9fbfb</text>
+<rect x="888" y="1610" width="190" height="80" rx="8" fill="#161b1d" stroke="#00000022" stroke-width="1"/>
+<text x="888" y="1709" font-size="12" fill="#f5f5f5">popover</text>
+<text x="888" y="1723" font-size="11" fill="#9ca3af">#161b1d</text>
+<rect x="1098" y="1610" width="190" height="80" rx="8" fill="#f9fbfb" stroke="#00000022" stroke-width="1"/>
+<text x="1098" y="1709" font-size="12" fill="#f5f5f5">popover-foreground</text>
+<text x="1098" y="1723" font-size="11" fill="#9ca3af">#f9fbfb</text>
+<text x="48" y="1773" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#9ca3af" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">BRAND</text>
+<rect x="48" y="1794" width="190" height="80" rx="8" fill="#005f78" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="1893" font-size="12" fill="#f5f5f5">primary</text>
+<text x="48" y="1907" font-size="11" fill="#9ca3af">#005f78</text>
+<rect x="258" y="1794" width="190" height="80" rx="8" fill="#ecfeff" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="1893" font-size="12" fill="#f5f5f5">primary-foreground</text>
+<text x="258" y="1907" font-size="11" fill="#9ca3af">#ecfeff</text>
+<rect x="468" y="1794" width="190" height="80" rx="8" fill="#27272a" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="1893" font-size="12" fill="#f5f5f5">secondary</text>
+<text x="468" y="1907" font-size="11" fill="#9ca3af">#27272a</text>
+<rect x="678" y="1794" width="190" height="80" rx="8" fill="#fafafa" stroke="#00000022" stroke-width="1"/>
+<text x="678" y="1893" font-size="12" fill="#f5f5f5">secondary-foreground</text>
+<text x="678" y="1907" font-size="11" fill="#9ca3af">#fafafa</text>
+<rect x="888" y="1794" width="190" height="80" rx="8" fill="#22292b" stroke="#00000022" stroke-width="1"/>
+<text x="888" y="1893" font-size="12" fill="#f5f5f5">muted</text>
+<text x="888" y="1907" font-size="11" fill="#9ca3af">#22292b</text>
+<rect x="1098" y="1794" width="190" height="80" rx="8" fill="#9ca8ab" stroke="#00000022" stroke-width="1"/>
+<text x="1098" y="1893" font-size="12" fill="#f5f5f5">muted-foreground</text>
+<text x="1098" y="1907" font-size="11" fill="#9ca3af">#9ca8ab</text>
+<rect x="48" y="1932" width="190" height="80" rx="8" fill="#22292b" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="2031" font-size="12" fill="#f5f5f5">accent</text>
+<text x="48" y="2045" font-size="11" fill="#9ca3af">#22292b</text>
+<rect x="258" y="1932" width="190" height="80" rx="8" fill="#f9fbfb" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="2031" font-size="12" fill="#f5f5f5">accent-foreground</text>
+<text x="258" y="2045" font-size="11" fill="#9ca3af">#f9fbfb</text>
+<text x="48" y="2095" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#9ca3af" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">STATUS</text>
+<rect x="48" y="2116" width="190" height="80" rx="8" fill="#df2225" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="2215" font-size="12" fill="#f5f5f5">destructive</text>
+<text x="48" y="2229" font-size="11" fill="#9ca3af">#df2225</text>
+<rect x="258" y="2116" width="190" height="80" rx="8" fill="#df2225" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="2215" font-size="12" fill="#f5f5f5">destructive-foreground</text>
+<text x="258" y="2229" font-size="11" fill="#9ca3af">#df2225</text>
+<rect x="468" y="2116" width="190" height="80" rx="8" fill="#e49e28" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="2215" font-size="12" fill="#f5f5f5">caution</text>
+<text x="468" y="2229" font-size="11" fill="#9ca3af">#e49e28</text>
+<rect x="678" y="2116" width="190" height="80" rx="8" fill="#1b150c" stroke="#00000022" stroke-width="1"/>
+<text x="678" y="2215" font-size="12" fill="#f5f5f5">caution-foreground</text>
+<text x="678" y="2229" font-size="11" fill="#9ca3af">#1b150c</text>
+<rect x="888" y="2116" width="190" height="80" rx="8" fill="#24ab39" stroke="#00000022" stroke-width="1"/>
+<text x="888" y="2215" font-size="12" fill="#f5f5f5">success</text>
+<text x="888" y="2229" font-size="11" fill="#9ca3af">#24ab39</text>
+<rect x="1098" y="2116" width="190" height="80" rx="8" fill="#101810" stroke="#00000022" stroke-width="1"/>
+<text x="1098" y="2215" font-size="12" fill="#f5f5f5">success-foreground</text>
+<text x="1098" y="2229" font-size="11" fill="#9ca3af">#101810</text>
+<text x="48" y="2279" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#9ca3af" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">FORM &amp; INTERACTION</text>
+<rect x="48" y="2300" width="190" height="80" rx="8" fill="url(#alpha-grid)" stroke="#00000022" stroke-width="1"/>
+<rect x="48" y="2300" width="190" height="80" rx="8" fill="#f5ffff" fill-opacity="0.102" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="2399" font-size="12" fill="#f5f5f5">border</text>
+<text x="48" y="2413" font-size="11" fill="#9ca3af">#f5ffff1a</text>
+<rect x="258" y="2300" width="190" height="80" rx="8" fill="url(#alpha-grid)" stroke="#00000022" stroke-width="1"/>
+<rect x="258" y="2300" width="190" height="80" rx="8" fill="#ffffff" fill-opacity="0.149" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="2399" font-size="12" fill="#f5f5f5">input</text>
+<text x="258" y="2413" font-size="11" fill="#9ca3af">#ffffff26</text>
+<rect x="468" y="2300" width="190" height="80" rx="8" fill="#67787c" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="2399" font-size="12" fill="#f5f5f5">ring</text>
+<text x="468" y="2413" font-size="11" fill="#9ca3af">#67787c</text>
+<text x="48" y="2463" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#9ca3af" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">CHART</text>
+<rect x="48" y="2484" width="190" height="80" rx="8" fill="#53eafd" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="2583" font-size="12" fill="#f5f5f5">chart-1</text>
+<text x="48" y="2597" font-size="11" fill="#9ca3af">#53eafd</text>
+<rect x="258" y="2484" width="190" height="80" rx="8" fill="#00b8db" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="2583" font-size="12" fill="#f5f5f5">chart-2</text>
+<text x="258" y="2597" font-size="11" fill="#9ca3af">#00b8db</text>
+<rect x="468" y="2484" width="190" height="80" rx="8" fill="#0092b8" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="2583" font-size="12" fill="#f5f5f5">chart-3</text>
+<text x="468" y="2597" font-size="11" fill="#9ca3af">#0092b8</text>
+<rect x="678" y="2484" width="190" height="80" rx="8" fill="#007595" stroke="#00000022" stroke-width="1"/>
+<text x="678" y="2583" font-size="12" fill="#f5f5f5">chart-4</text>
+<text x="678" y="2597" font-size="11" fill="#9ca3af">#007595</text>
+<rect x="888" y="2484" width="190" height="80" rx="8" fill="#005f78" stroke="#00000022" stroke-width="1"/>
+<text x="888" y="2583" font-size="12" fill="#f5f5f5">chart-5</text>
+<text x="888" y="2597" font-size="11" fill="#9ca3af">#005f78</text>
+<text x="48" y="2647" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#9ca3af" font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, sans-serif">SIDEBAR</text>
+<rect x="48" y="2668" width="190" height="80" rx="8" fill="#161b1d" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="2767" font-size="12" fill="#f5f5f5">sidebar</text>
+<text x="48" y="2781" font-size="11" fill="#9ca3af">#161b1d</text>
+<rect x="258" y="2668" width="190" height="80" rx="8" fill="#f9fbfb" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="2767" font-size="12" fill="#f5f5f5">sidebar-foreground</text>
+<text x="258" y="2781" font-size="11" fill="#9ca3af">#f9fbfb</text>
+<rect x="468" y="2668" width="190" height="80" rx="8" fill="#00b8db" stroke="#00000022" stroke-width="1"/>
+<text x="468" y="2767" font-size="12" fill="#f5f5f5">sidebar-primary</text>
+<text x="468" y="2781" font-size="11" fill="#9ca3af">#00b8db</text>
+<rect x="678" y="2668" width="190" height="80" rx="8" fill="#053345" stroke="#00000022" stroke-width="1"/>
+<text x="678" y="2767" font-size="12" fill="#f5f5f5">sidebar-primary-foreground</text>
+<text x="678" y="2781" font-size="11" fill="#9ca3af">#053345</text>
+<rect x="888" y="2668" width="190" height="80" rx="8" fill="#22292b" stroke="#00000022" stroke-width="1"/>
+<text x="888" y="2767" font-size="12" fill="#f5f5f5">sidebar-accent</text>
+<text x="888" y="2781" font-size="11" fill="#9ca3af">#22292b</text>
+<rect x="1098" y="2668" width="190" height="80" rx="8" fill="#f9fbfb" stroke="#00000022" stroke-width="1"/>
+<text x="1098" y="2767" font-size="12" fill="#f5f5f5">sidebar-accent-foreground</text>
+<text x="1098" y="2781" font-size="11" fill="#9ca3af">#f9fbfb</text>
+<rect x="48" y="2806" width="190" height="80" rx="8" fill="url(#alpha-grid)" stroke="#00000022" stroke-width="1"/>
+<rect x="48" y="2806" width="190" height="80" rx="8" fill="#f5ffff" fill-opacity="0.102" stroke="#00000022" stroke-width="1"/>
+<text x="48" y="2905" font-size="12" fill="#f5f5f5">sidebar-border</text>
+<text x="48" y="2919" font-size="11" fill="#9ca3af">#f5ffff1a</text>
+<rect x="258" y="2806" width="190" height="80" rx="8" fill="#67787c" stroke="#00000022" stroke-width="1"/>
+<text x="258" y="2905" font-size="12" fill="#f5f5f5">sidebar-ring</text>
+<text x="258" y="2919" font-size="11" fill="#9ca3af">#67787c</text>
+</svg>

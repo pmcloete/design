@@ -1,0 +1,1290 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "arctix-ui",
+  "homepage": "https://github.com/pmcloete/design",
+  "items": [
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "dependencies": [
+        "clsx@^2.1.1",
+        "tailwind-merge@^3.6.0"
+      ],
+      "files": [
+        {
+          "path": "src/lib/utils.ts",
+          "type": "registry:lib",
+          "target": "lib/utils.ts"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/accordion.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/accordion.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/alert.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert.tsx",
+          "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst alertVariants = cva(\n  \"relative grid w-full grid-cols-[0_1fr] items-start gap-y-0.5 rounded-lg border px-4 py-3 text-sm has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-[>svg]:gap-x-3 [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-card text-card-foreground\",\n        destructive:\n          \"bg-card text-destructive *:data-[slot=alert-description]:text-destructive/90 [&>svg]:text-current\",\n        caution:\n          \"bg-card text-caution *:data-[slot=alert-description]:text-caution/90 [&>svg]:text-current\",\n        success:\n          \"bg-card text-success *:data-[slot=alert-description]:text-success/90 [&>svg]:text-current\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  }\n)\n\nfunction Alert({\n  className,\n  variant,\n  ...props\n}: React.ComponentProps<\"div\"> & VariantProps<typeof alertVariants>) {\n  return (\n    <div\n      data-slot=\"alert\"\n      role=\"alert\"\n      className={cn(alertVariants({ variant }), className)}\n      {...props}\n    />\n  )\n}\n\nfunction AlertTitle({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"alert-title\"\n      className={cn(\n        \"col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction AlertDescription({\n  className,\n  ...props\n}: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"alert-description\"\n      className={cn(\n        \"col-start-2 grid justify-items-start gap-1 text-sm text-muted-foreground [&_p]:leading-relaxed\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Alert, AlertTitle, AlertDescription }\n"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/alert-dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert-dialog.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/button",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/aspect-ratio.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/aspect-ratio.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ]
+    },
+    {
+      "name": "attachment",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/attachment.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/attachment.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/button",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/avatar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/badge.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/badge.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/breadcrumb.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/breadcrumb.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/button.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/button-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/separator",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/calendar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/calendar.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "react-day-picker@^10.0.1"
+      ],
+      "registryDependencies": [
+        "@arctix/button",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/carousel.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/carousel.tsx"
+        }
+      ],
+      "dependencies": [
+        "embla-carousel-react@^8.6.0",
+        "lucide-react@^1.25.0"
+      ],
+      "registryDependencies": [
+        "@arctix/button",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/chart.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/chart.tsx"
+        }
+      ],
+      "dependencies": [
+        "recharts@^2.15.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/checkbox.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/collapsible.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/collapsible.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/combobox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/combobox.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react@^1.6.0",
+        "lucide-react@^1.25.0"
+      ],
+      "registryDependencies": [
+        "@arctix/button",
+        "@arctix/input-group",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/command.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/command.tsx"
+        }
+      ],
+      "dependencies": [
+        "cmdk@^1.1.1",
+        "lucide-react@^1.25.0"
+      ],
+      "registryDependencies": [
+        "@arctix/dialog",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/context-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/context-menu.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dialog.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/button",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/drawer.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/drawer.tsx"
+        }
+      ],
+      "dependencies": [
+        "vaul@^1.1.2"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/dropdown-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dropdown-menu.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "empty",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/empty.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/empty.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/field.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/field.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1"
+      ],
+      "registryDependencies": [
+        "@arctix/label",
+        "@arctix/separator",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/form.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/form.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4",
+        "react-hook-form@^7.82.0"
+      ],
+      "registryDependencies": [
+        "@arctix/label",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/hover-card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/hover-card.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/input.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/input-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1"
+      ],
+      "registryDependencies": [
+        "@arctix/button",
+        "@arctix/input",
+        "@arctix/textarea",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/input-otp.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input-otp.tsx"
+        }
+      ],
+      "dependencies": [
+        "input-otp@^1.4.2",
+        "lucide-react@^1.25.0"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "item",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/item.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/item.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/separator",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/kbd.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/kbd.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/label.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/menubar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/menubar.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "native-select",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/native-select.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/native-select.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/navigation-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/navigation-menu.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/pagination.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/pagination.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0"
+      ],
+      "registryDependencies": [
+        "@arctix/button",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/popover.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/popover.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/progress.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/progress.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/radio-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/radio-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "resizable",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/resizable.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/resizable.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "react-resizable-panels@^4.12.2"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/scroll-area.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/scroll-area.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/select.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/select.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/separator.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/separator.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/sheet.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sheet.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/sidebar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sidebar.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "lucide-react@^1.25.0",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/button",
+        "@arctix/input",
+        "@arctix/separator",
+        "@arctix/sheet",
+        "@arctix/skeleton",
+        "@arctix/tooltip",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/skeleton.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/skeleton.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/slider.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/slider.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "sonner",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/sonner.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sonner.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0",
+        "next-themes@^0.4.6",
+        "sonner@^2.0.7"
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/spinner.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/spinner.tsx"
+        }
+      ],
+      "dependencies": [
+        "lucide-react@^1.25.0"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/switch.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/switch.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/table.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/table.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tabs.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/textarea.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/textarea.tsx"
+        }
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/toggle.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/toggle-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/toggle",
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "src/components/ui/tooltip.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tooltip.tsx"
+        }
+      ],
+      "dependencies": [
+        "radix-ui@^1.6.4"
+      ],
+      "registryDependencies": [
+        "@arctix/utils"
+      ]
+    },
+    {
+      "name": "theme-neutral",
+      "type": "registry:theme",
+      "cssVars": {
+        "light": {
+          "radius": "0.625rem",
+          "background": "oklch(1 0 0)",
+          "foreground": "oklch(0% 0 0)",
+          "card": "oklch(1 0 0)",
+          "card-foreground": "oklch(0% 0 0)",
+          "popover": "oklch(1 0 0)",
+          "popover-foreground": "oklch(0% 0 0)",
+          "primary": "oklch(0% 0 0)",
+          "primary-foreground": "oklch(0.985 0 0)",
+          "secondary": "oklch(0.97 0 0)",
+          "secondary-foreground": "oklch(0.205 0 0)",
+          "muted": "oklch(0.97 0 0)",
+          "muted-foreground": "oklch(0.556 0 0)",
+          "accent": "oklch(0.97 0 0)",
+          "accent-foreground": "oklch(0.205 0 0)",
+          "destructive": "oklch(0.577 0.245 27.325)",
+          "destructive-foreground": "oklch(0.97 0.01 17)",
+          "border": "oklch(0.922 0 0)",
+          "input": "oklch(0.922 0 0)",
+          "ring": "oklch(0.708 0 0)",
+          "chart-1": "var(--color-blue-300)",
+          "chart-2": "var(--color-blue-500)",
+          "chart-3": "var(--color-blue-600)",
+          "chart-4": "var(--color-blue-700)",
+          "chart-5": "var(--color-blue-800)",
+          "sidebar": "oklch(0.985 0 0)",
+          "sidebar-foreground": "oklch(0% 0 0)",
+          "sidebar-primary": "oklch(0.205 0 0)",
+          "sidebar-primary-foreground": "oklch(0.985 0 0)",
+          "sidebar-accent": "oklch(0.97 0 0)",
+          "sidebar-accent-foreground": "oklch(0.205 0 0)",
+          "sidebar-border": "oklch(0.922 0 0)",
+          "sidebar-ring": "oklch(0.708 0 0)"
+        },
+        "dark": {
+          "background": "oklch(0.145 0 0)",
+          "foreground": "oklch(0.985 0 0)",
+          "card": "oklch(0.205 0 0)",
+          "card-foreground": "oklch(0.985 0 0)",
+          "popover": "oklch(0.205 0 0)",
+          "popover-foreground": "oklch(0.985 0 0)",
+          "primary": "oklch(0.922 0 0)",
+          "primary-foreground": "oklch(0.205 0 0)",
+          "secondary": "oklch(0.269 0 0)",
+          "secondary-foreground": "oklch(0.985 0 0)",
+          "muted": "oklch(0.269 0 0)",
+          "muted-foreground": "oklch(0.708 0 0)",
+          "accent": "oklch(0.371 0 0)",
+          "accent-foreground": "oklch(0.985 0 0)",
+          "destructive": "oklch(0.704 0.191 22.216)",
+          "destructive-foreground": "oklch(0.58 0.22 27)",
+          "border": "oklch(1 0 0 / 10%)",
+          "input": "oklch(1 0 0 / 15%)",
+          "ring": "oklch(0.556 0 0)",
+          "chart-1": "var(--color-blue-300)",
+          "chart-2": "var(--color-blue-500)",
+          "chart-3": "var(--color-blue-600)",
+          "chart-4": "var(--color-blue-700)",
+          "chart-5": "var(--color-blue-800)",
+          "sidebar": "oklch(0.205 0 0)",
+          "sidebar-foreground": "oklch(0.985 0 0)",
+          "sidebar-primary": "oklch(0.488 0.243 264.376)",
+          "sidebar-primary-foreground": "oklch(0.985 0 0)",
+          "sidebar-accent": "oklch(0.269 0 0)",
+          "sidebar-accent-foreground": "oklch(0.985 0 0)",
+          "sidebar-border": "oklch(1 0 0 / 10%)",
+          "sidebar-ring": "oklch(0.439 0 0)"
+        }
+      }
+    },
+    {
+      "name": "theme-radix-luma",
+      "type": "registry:theme",
+      "cssVars": {
+        "light": {
+          "radius": "0.45rem",
+          "font-sans": "\"Instrument Sans\", ui-sans-serif, system-ui, sans-serif",
+          "background": "oklch(1 0 0)",
+          "foreground": "oklch(0.148 0.004 228.8)",
+          "card": "oklch(1 0 0)",
+          "card-foreground": "oklch(0.148 0.004 228.8)",
+          "popover": "oklch(1 0 0)",
+          "popover-foreground": "oklch(0.148 0.004 228.8)",
+          "primary": "oklch(0.52 0.105 223.128)",
+          "primary-foreground": "oklch(0.984 0.019 200.873)",
+          "secondary": "oklch(0.967 0.001 286.375)",
+          "secondary-foreground": "oklch(0.21 0.006 285.885)",
+          "muted": "oklch(0.963 0.002 197.1)",
+          "muted-foreground": "oklch(0.56 0.021 213.5)",
+          "accent": "oklch(0.52 0.105 223.128)",
+          "accent-foreground": "oklch(0.984 0.019 200.873)",
+          "destructive": "oklch(0.577 0.245 27.325)",
+          "destructive-foreground": "oklch(0.97 0.01 17)",
+          "border": "oklch(0.925 0.005 214.3)",
+          "input": "oklch(0.925 0.005 214.3)",
+          "ring": "oklch(0.723 0.014 214.4)",
+          "chart-1": "oklch(0.865 0.127 207.078)",
+          "chart-2": "oklch(0.715 0.143 215.221)",
+          "chart-3": "oklch(0.609 0.126 221.723)",
+          "chart-4": "oklch(0.52 0.105 223.128)",
+          "chart-5": "oklch(0.45 0.085 224.283)",
+          "sidebar": "oklch(0.987 0.002 197.1)",
+          "sidebar-foreground": "oklch(0.148 0.004 228.8)",
+          "sidebar-primary": "oklch(0.609 0.126 221.723)",
+          "sidebar-primary-foreground": "oklch(0.984 0.019 200.873)",
+          "sidebar-accent": "oklch(0.963 0.002 197.1)",
+          "sidebar-accent-foreground": "oklch(0.218 0.008 223.9)",
+          "sidebar-border": "oklch(0.925 0.005 214.3)",
+          "sidebar-ring": "oklch(0.723 0.014 214.4)"
+        },
+        "dark": {
+          "background": "oklch(0.148 0.004 228.8)",
+          "foreground": "oklch(0.987 0.002 197.1)",
+          "card": "oklch(0.218 0.008 223.9)",
+          "card-foreground": "oklch(0.987 0.002 197.1)",
+          "popover": "oklch(0.218 0.008 223.9)",
+          "popover-foreground": "oklch(0.987 0.002 197.1)",
+          "primary": "oklch(0.45 0.085 224.283)",
+          "primary-foreground": "oklch(0.984 0.019 200.873)",
+          "secondary": "oklch(0.274 0.006 286.033)",
+          "secondary-foreground": "oklch(0.985 0 0)",
+          "muted": "oklch(0.275 0.011 216.9)",
+          "muted-foreground": "oklch(0.723 0.014 214.4)",
+          "accent": "oklch(0.45 0.085 224.283)",
+          "accent-foreground": "oklch(0.984 0.019 200.873)",
+          "destructive": "oklch(0.704 0.191 22.216)",
+          "destructive-foreground": "oklch(0.58 0.22 27)",
+          "border": "oklch(1 0 0 / 10%)",
+          "input": "oklch(1 0 0 / 15%)",
+          "ring": "oklch(0.56 0.021 213.5)",
+          "chart-1": "oklch(0.865 0.127 207.078)",
+          "chart-2": "oklch(0.715 0.143 215.221)",
+          "chart-3": "oklch(0.609 0.126 221.723)",
+          "chart-4": "oklch(0.52 0.105 223.128)",
+          "chart-5": "oklch(0.45 0.085 224.283)",
+          "sidebar": "oklch(0.218 0.008 223.9)",
+          "sidebar-foreground": "oklch(0.987 0.002 197.1)",
+          "sidebar-primary": "oklch(0.715 0.143 215.221)",
+          "sidebar-primary-foreground": "oklch(0.302 0.056 229.695)",
+          "sidebar-accent": "oklch(0.275 0.011 216.9)",
+          "sidebar-accent-foreground": "oklch(0.987 0.002 197.1)",
+          "sidebar-border": "oklch(1 0 0 / 10%)",
+          "sidebar-ring": "oklch(0.56 0.021 213.5)"
+        }
+      }
+    },
+    {
+      "name": "theme-brand-red",
+      "type": "registry:theme",
+      "cssVars": {
+        "light": {
+          "background": "oklch(1 0 0)",
+          "foreground": "oklch(0.148 0.004 228.8)",
+          "card": "oklch(1 0 0)",
+          "card-foreground": "oklch(0.148 0.004 228.8)",
+          "popover": "oklch(1 0 0)",
+          "popover-foreground": "oklch(0.148 0.004 228.8)",
+          "primary": "oklch(0.52 0.105 223.128)",
+          "primary-foreground": "oklch(0.984 0.019 200.873)",
+          "secondary": "oklch(0.967 0.001 286.375)",
+          "secondary-foreground": "oklch(0.21 0.006 285.885)",
+          "muted": "oklch(0.963 0.002 197.1)",
+          "muted-foreground": "oklch(0.56 0.021 213.5)",
+          "accent": "oklch(0.963 0.002 197.1)",
+          "accent-foreground": "oklch(0.218 0.008 223.9)",
+          "destructive": "#df2225",
+          "destructive-foreground": "#fcf3f3",
+          "caution": "#e49e28",
+          "caution-foreground": "#1b150c",
+          "success": "#24ab39",
+          "success-foreground": "#101810",
+          "border": "oklch(0.925 0.005 214.3)",
+          "input": "oklch(0.925 0.005 214.3)",
+          "ring": "oklch(0.723 0.014 214.4)",
+          "chart-1": "oklch(0.865 0.127 207.078)",
+          "chart-2": "oklch(0.715 0.143 215.221)",
+          "chart-3": "oklch(0.609 0.126 221.723)",
+          "chart-4": "oklch(0.52 0.105 223.128)",
+          "chart-5": "oklch(0.45 0.085 224.283)",
+          "radius": "0.625rem",
+          "sidebar": "oklch(0.987 0.002 197.1)",
+          "sidebar-foreground": "oklch(0.148 0.004 228.8)",
+          "sidebar-primary": "oklch(0.609 0.126 221.723)",
+          "sidebar-primary-foreground": "oklch(0.984 0.019 200.873)",
+          "sidebar-accent": "oklch(0.963 0.002 197.1)",
+          "sidebar-accent-foreground": "oklch(0.218 0.008 223.9)",
+          "sidebar-border": "oklch(0.925 0.005 214.3)",
+          "sidebar-ring": "oklch(0.723 0.014 214.4)"
+        },
+        "dark": {
+          "background": "oklch(0.148 0.004 228.8)",
+          "foreground": "oklch(0.987 0.002 197.1)",
+          "card": "oklch(0.218 0.008 223.9)",
+          "card-foreground": "oklch(0.987 0.002 197.1)",
+          "popover": "oklch(0.218 0.008 223.9)",
+          "popover-foreground": "oklch(0.987 0.002 197.1)",
+          "primary": "oklch(0.45 0.085 224.283)",
+          "primary-foreground": "oklch(0.984 0.019 200.873)",
+          "secondary": "oklch(0.274 0.006 286.033)",
+          "secondary-foreground": "oklch(0.985 0 0)",
+          "muted": "oklch(0.275 0.011 216.9)",
+          "muted-foreground": "oklch(0.723 0.014 214.4)",
+          "accent": "oklch(0.275 0.011 216.9)",
+          "accent-foreground": "oklch(0.987 0.002 197.1)",
+          "destructive": "#df2225",
+          "destructive-foreground": "#df2225",
+          "caution": "#e49e28",
+          "caution-foreground": "#1b150c",
+          "success": "#24ab39",
+          "success-foreground": "#101810",
+          "border": "oklch(1 0 0 / 10%)",
+          "input": "oklch(1 0 0 / 15%)",
+          "ring": "oklch(0.56 0.021 213.5)",
+          "chart-1": "oklch(0.865 0.127 207.078)",
+          "chart-2": "oklch(0.715 0.143 215.221)",
+          "chart-3": "oklch(0.609 0.126 221.723)",
+          "chart-4": "oklch(0.52 0.105 223.128)",
+          "chart-5": "oklch(0.45 0.085 224.283)",
+          "sidebar": "oklch(0.218 0.008 223.9)",
+          "sidebar-foreground": "oklch(0.987 0.002 197.1)",
+          "sidebar-primary": "oklch(0.715 0.143 215.221)",
+          "sidebar-primary-foreground": "oklch(0.302 0.056 229.695)",
+          "sidebar-accent": "oklch(0.275 0.011 216.9)",
+          "sidebar-accent-foreground": "oklch(0.987 0.002 197.1)",
+          "sidebar-border": "oklch(1 0 0 / 10%)",
+          "sidebar-ring": "oklch(0.56 0.021 213.5)"
+        }
+      },
+      "css": {
+        ".dark [data-slot=\"button\"][data-variant=\"destructive\"]": {
+          "background-color": "var(--destructive)"
+        },
+        ".dark [data-slot=\"button\"][data-variant=\"destructive\"]:hover": {
+          "background-color": "color-mix(in oklab, var(--destructive) 90%, transparent)"
+        }
+      }
+    },
+    {
+      "name": "sidebar-07",
+      "type": "registry:block",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "@arctix/sidebar",
+        "@arctix/dropdown-menu",
+        "@arctix/avatar",
+        "@arctix/collapsible"
+      ],
+      "files": [
+        {
+          "path": "src/components/app-sidebar.tsx",
+          "type": "registry:component",
+          "target": "components/app-sidebar.tsx",
+          "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  AudioWaveform,\n  BookOpen,\n  Bot,\n  Command,\n  Frame,\n  GalleryVerticalEnd,\n  Map,\n  PieChart,\n  Settings2,\n  SquareTerminal,\n} from \"lucide-react\"\n\nimport { NavMain } from \"@/components/nav-main\"\nimport { NavProjects } from \"@/components/nav-projects\"\nimport { NavUser } from \"@/components/nav-user\"\nimport { TeamSwitcher } from \"@/components/team-switcher\"\nimport {\n  Sidebar,\n  SidebarContent,\n  SidebarFooter,\n  SidebarHeader,\n  SidebarRail,\n} from \"@/components/ui/sidebar\"\n\n// This is sample data.\nconst data = {\n  user: {\n    name: \"shadcn\",\n    email: \"m@example.com\",\n    avatar: \"/avatars/shadcn.jpg\",\n  },\n  teams: [\n    {\n      name: \"Acme Inc\",\n      logo: GalleryVerticalEnd,\n      plan: \"Enterprise\",\n    },\n    {\n      name: \"Acme Corp.\",\n      logo: AudioWaveform,\n      plan: \"Startup\",\n    },\n    {\n      name: \"Evil Corp.\",\n      logo: Command,\n      plan: \"Free\",\n    },\n  ],\n  navMain: [\n    {\n      title: \"Playground\",\n      url: \"#\",\n      icon: SquareTerminal,\n      isActive: true,\n      items: [\n        {\n          title: \"History\",\n          url: \"#\",\n        },\n        {\n          title: \"Starred\",\n          url: \"#\",\n        },\n        {\n          title: \"Settings\",\n          url: \"#\",\n        },\n      ],\n    },\n    {\n      title: \"Models\",\n      url: \"#\",\n      icon: Bot,\n      items: [\n        {\n          title: \"Genesis\",\n          url: \"#\",\n        },\n        {\n          title: \"Explorer\",\n          url: \"#\",\n        },\n        {\n          title: \"Quantum\",\n          url: \"#\",\n        },\n      ],\n    },\n    {\n      title: \"Documentation\",\n      url: \"#\",\n      icon: BookOpen,\n      items: [\n        {\n          title: \"Introduction\",\n          url: \"#\",\n        },\n        {\n          title: \"Get Started\",\n          url: \"#\",\n        },\n        {\n          title: \"Tutorials\",\n          url: \"#\",\n        },\n        {\n          title: \"Changelog\",\n          url: \"#\",\n        },\n      ],\n    },\n    {\n      title: \"Settings\",\n      url: \"#\",\n      icon: Settings2,\n      items: [\n        {\n          title: \"General\",\n          url: \"#\",\n        },\n        {\n          title: \"Team\",\n          url: \"#\",\n        },\n        {\n          title: \"Billing\",\n          url: \"#\",\n        },\n        {\n          title: \"Limits\",\n          url: \"#\",\n        },\n      ],\n    },\n  ],\n  projects: [\n    {\n      name: \"Design Engineering\",\n      url: \"#\",\n      icon: Frame,\n    },\n    {\n      name: \"Sales & Marketing\",\n      url: \"#\",\n      icon: PieChart,\n    },\n    {\n      name: \"Travel\",\n      url: \"#\",\n      icon: Map,\n    },\n  ],\n}\n\nexport function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {\n  return (\n    <Sidebar collapsible=\"icon\" {...props}>\n      <SidebarHeader>\n        <TeamSwitcher teams={data.teams} />\n      </SidebarHeader>\n      <SidebarContent>\n        <NavMain items={data.navMain} />\n        <NavProjects projects={data.projects} />\n      </SidebarContent>\n      <SidebarFooter>\n        <NavUser user={data.user} />\n      </SidebarFooter>\n      <SidebarRail />\n    </Sidebar>\n  )\n}\n"
+        },
+        {
+          "path": "src/components/nav-main.tsx",
+          "type": "registry:component",
+          "target": "components/nav-main.tsx",
+          "content": "\"use client\"\n\nimport { ChevronRight, type LucideIcon } from \"lucide-react\"\n\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@/components/ui/collapsible\"\nimport {\n  SidebarGroup,\n  SidebarGroupLabel,\n  SidebarMenu,\n  SidebarMenuButton,\n  SidebarMenuItem,\n  SidebarMenuSub,\n  SidebarMenuSubButton,\n  SidebarMenuSubItem,\n} from \"@/components/ui/sidebar\"\n\nexport function NavMain({\n  items,\n}: {\n  items: {\n    title: string\n    url: string\n    icon?: LucideIcon\n    isActive?: boolean\n    items?: {\n      title: string\n      url: string\n    }[]\n  }[]\n}) {\n  return (\n    <SidebarGroup>\n      <SidebarGroupLabel>Platform</SidebarGroupLabel>\n      <SidebarMenu>\n        {items.map((item) => (\n          <Collapsible\n            key={item.title}\n            asChild\n            defaultOpen={item.isActive}\n            className=\"group/collapsible\"\n          >\n            <SidebarMenuItem>\n              <CollapsibleTrigger asChild>\n                <SidebarMenuButton tooltip={item.title}>\n                  {item.icon && <item.icon />}\n                  <span>{item.title}</span>\n                  <ChevronRight className=\"ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90\" />\n                </SidebarMenuButton>\n              </CollapsibleTrigger>\n              <CollapsibleContent>\n                <SidebarMenuSub>\n                  {item.items?.map((subItem) => (\n                    <SidebarMenuSubItem key={subItem.title}>\n                      <SidebarMenuSubButton asChild>\n                        <a href={subItem.url}>\n                          <span>{subItem.title}</span>\n                        </a>\n                      </SidebarMenuSubButton>\n                    </SidebarMenuSubItem>\n                  ))}\n                </SidebarMenuSub>\n              </CollapsibleContent>\n            </SidebarMenuItem>\n          </Collapsible>\n        ))}\n      </SidebarMenu>\n    </SidebarGroup>\n  )\n}\n"
+        },
+        {
+          "path": "src/components/nav-projects.tsx",
+          "type": "registry:component",
+          "target": "components/nav-projects.tsx",
+          "content": "\"use client\"\n\nimport {\n  Folder,\n  Forward,\n  MoreHorizontal,\n  Trash2,\n  type LucideIcon,\n} from \"lucide-react\"\n\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\"\nimport {\n  SidebarGroup,\n  SidebarGroupLabel,\n  SidebarMenu,\n  SidebarMenuAction,\n  SidebarMenuButton,\n  SidebarMenuItem,\n  useSidebar,\n} from \"@/components/ui/sidebar\"\n\nexport function NavProjects({\n  projects,\n}: {\n  projects: {\n    name: string\n    url: string\n    icon: LucideIcon\n  }[]\n}) {\n  const { isMobile } = useSidebar()\n\n  return (\n    <SidebarGroup className=\"group-data-[collapsible=icon]:hidden\">\n      <SidebarGroupLabel>Projects</SidebarGroupLabel>\n      <SidebarMenu>\n        {projects.map((item) => (\n          <SidebarMenuItem key={item.name}>\n            <SidebarMenuButton asChild>\n              <a href={item.url}>\n                <item.icon />\n                <span>{item.name}</span>\n              </a>\n            </SidebarMenuButton>\n            <DropdownMenu>\n              <DropdownMenuTrigger asChild>\n                <SidebarMenuAction showOnHover>\n                  <MoreHorizontal />\n                  <span className=\"sr-only\">More</span>\n                </SidebarMenuAction>\n              </DropdownMenuTrigger>\n              <DropdownMenuContent\n                className=\"w-48 rounded-lg\"\n                side={isMobile ? \"bottom\" : \"right\"}\n                align={isMobile ? \"end\" : \"start\"}\n              >\n                <DropdownMenuItem>\n                  <Folder className=\"text-muted-foreground\" />\n                  <span>View Project</span>\n                </DropdownMenuItem>\n                <DropdownMenuItem>\n                  <Forward className=\"text-muted-foreground\" />\n                  <span>Share Project</span>\n                </DropdownMenuItem>\n                <DropdownMenuSeparator />\n                <DropdownMenuItem>\n                  <Trash2 className=\"text-muted-foreground\" />\n                  <span>Delete Project</span>\n                </DropdownMenuItem>\n              </DropdownMenuContent>\n            </DropdownMenu>\n          </SidebarMenuItem>\n        ))}\n        <SidebarMenuItem>\n          <SidebarMenuButton className=\"text-sidebar-foreground/70\">\n            <MoreHorizontal className=\"text-sidebar-foreground/70\" />\n            <span>More</span>\n          </SidebarMenuButton>\n        </SidebarMenuItem>\n      </SidebarMenu>\n    </SidebarGroup>\n  )\n}\n"
+        },
+        {
+          "path": "src/components/nav-user.tsx",
+          "type": "registry:component",
+          "target": "components/nav-user.tsx",
+          "content": "\"use client\"\n\nimport {\n  BadgeCheck,\n  Bell,\n  ChevronsUpDown,\n  CreditCard,\n  LogOut,\n  Sparkles,\n} from \"lucide-react\"\n\nimport {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/components/ui/avatar\"\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\"\nimport {\n  SidebarMenu,\n  SidebarMenuButton,\n  SidebarMenuItem,\n  useSidebar,\n} from \"@/components/ui/sidebar\"\n\nexport function NavUser({\n  user,\n}: {\n  user: {\n    name: string\n    email: string\n    avatar: string\n  }\n}) {\n  const { isMobile } = useSidebar()\n\n  return (\n    <SidebarMenu>\n      <SidebarMenuItem>\n        <DropdownMenu>\n          <DropdownMenuTrigger asChild>\n            <SidebarMenuButton\n              size=\"lg\"\n              className=\"data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground\"\n            >\n              <Avatar className=\"h-8 w-8 rounded-lg\">\n                <AvatarImage src={user.avatar} alt={user.name} />\n                <AvatarFallback className=\"rounded-lg\">CN</AvatarFallback>\n              </Avatar>\n              <div className=\"grid flex-1 text-left text-sm leading-tight\">\n                <span className=\"truncate font-medium\">{user.name}</span>\n                <span className=\"truncate text-xs\">{user.email}</span>\n              </div>\n              <ChevronsUpDown className=\"ml-auto size-4\" />\n            </SidebarMenuButton>\n          </DropdownMenuTrigger>\n          <DropdownMenuContent\n            className=\"w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg\"\n            side={isMobile ? \"bottom\" : \"right\"}\n            align=\"end\"\n            sideOffset={4}\n          >\n            <DropdownMenuLabel className=\"p-0 font-normal\">\n              <div className=\"flex items-center gap-2 px-1 py-1.5 text-left text-sm\">\n                <Avatar className=\"h-8 w-8 rounded-lg\">\n                  <AvatarImage src={user.avatar} alt={user.name} />\n                  <AvatarFallback className=\"rounded-lg\">CN</AvatarFallback>\n                </Avatar>\n                <div className=\"grid flex-1 text-left text-sm leading-tight\">\n                  <span className=\"truncate font-medium\">{user.name}</span>\n                  <span className=\"truncate text-xs\">{user.email}</span>\n                </div>\n              </div>\n            </DropdownMenuLabel>\n            <DropdownMenuSeparator />\n            <DropdownMenuGroup>\n              <DropdownMenuItem>\n                <Sparkles />\n                Upgrade to Pro\n              </DropdownMenuItem>\n            </DropdownMenuGroup>\n            <DropdownMenuSeparator />\n            <DropdownMenuGroup>\n              <DropdownMenuItem>\n                <BadgeCheck />\n                Account\n              </DropdownMenuItem>\n              <DropdownMenuItem>\n                <CreditCard />\n                Billing\n              </DropdownMenuItem>\n              <DropdownMenuItem>\n                <Bell />\n                Notifications\n              </DropdownMenuItem>\n            </DropdownMenuGroup>\n            <DropdownMenuSeparator />\n            <DropdownMenuItem>\n              <LogOut />\n              Log out\n            </DropdownMenuItem>\n          </DropdownMenuContent>\n        </DropdownMenu>\n      </SidebarMenuItem>\n    </SidebarMenu>\n  )\n}\n"
+        },
+        {
+          "path": "src/components/team-switcher.tsx",
+          "type": "registry:component",
+          "target": "components/team-switcher.tsx",
+          "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { ChevronsUpDown, Plus } from \"lucide-react\"\n\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuShortcut,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\"\nimport {\n  SidebarMenu,\n  SidebarMenuButton,\n  SidebarMenuItem,\n  useSidebar,\n} from \"@/components/ui/sidebar\"\n\nexport function TeamSwitcher({\n  teams,\n}: {\n  teams: {\n    name: string\n    logo: React.ElementType\n    plan: string\n  }[]\n}) {\n  const { isMobile } = useSidebar()\n  const [activeTeam, setActiveTeam] = React.useState(teams[0])\n\n  if (!activeTeam) {\n    return null\n  }\n\n  return (\n    <SidebarMenu>\n      <SidebarMenuItem>\n        <DropdownMenu>\n          <DropdownMenuTrigger asChild>\n            <SidebarMenuButton\n              size=\"lg\"\n              className=\"data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground\"\n            >\n              <div className=\"flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground\">\n                <activeTeam.logo className=\"size-4\" />\n              </div>\n              <div className=\"grid flex-1 text-left text-sm leading-tight\">\n                <span className=\"truncate font-medium\">{activeTeam.name}</span>\n                <span className=\"truncate text-xs\">{activeTeam.plan}</span>\n              </div>\n              <ChevronsUpDown className=\"ml-auto\" />\n            </SidebarMenuButton>\n          </DropdownMenuTrigger>\n          <DropdownMenuContent\n            className=\"w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg\"\n            align=\"start\"\n            side={isMobile ? \"bottom\" : \"right\"}\n            sideOffset={4}\n          >\n            <DropdownMenuLabel className=\"text-xs text-muted-foreground\">\n              Teams\n            </DropdownMenuLabel>\n            {teams.map((team, index) => (\n              <DropdownMenuItem\n                key={team.name}\n                onClick={() => setActiveTeam(team)}\n                className=\"gap-2 p-2\"\n              >\n                <div className=\"flex size-6 items-center justify-center rounded-md border\">\n                  <team.logo className=\"size-3.5 shrink-0\" />\n                </div>\n                {team.name}\n                <DropdownMenuShortcut>\u2318{index + 1}</DropdownMenuShortcut>\n              </DropdownMenuItem>\n            ))}\n            <DropdownMenuSeparator />\n            <DropdownMenuItem className=\"gap-2 p-2\">\n              <div className=\"flex size-6 items-center justify-center rounded-md border bg-transparent\">\n                <Plus className=\"size-4\" />\n              </div>\n              <div className=\"font-medium text-muted-foreground\">Add team</div>\n            </DropdownMenuItem>\n          </DropdownMenuContent>\n        </DropdownMenu>\n      </SidebarMenuItem>\n    </SidebarMenu>\n  )\n}\n"
+        }
+      ]
+    }
+  ]
+}

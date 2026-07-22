@@ -44,7 +44,7 @@ npx vite preview --config vite.showcase.config.ts
 After changing a shared component in `src/components/ui/`, keep the registry in sync:
 
 ```bash
-npx shadcn build registry.json -o public/r
+npx shadcn build registry.json -o /r
 ```
 
 ## Fonts
